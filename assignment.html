@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Assignments | E-Learning Platform
+
+    </title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="css/course.css">
+
+    <link rel="stylesheet"
+        href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+            NAVBAR
+    ============================ -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <span>
+
+                    E-Learn
+
+                </span>
+
+            </div>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchAssignment"
+                    placeholder="Search Assignment">
+
+                <button>
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+            <div class="nav-right">
+
+                <button
+                    class="icon-btn"
+                    id="notificationBtn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <div class="profile">
+
+                    <img
+                        id="profileImage"
+                        src="assets/images/default-user.png"
+                        alt="Student">
+
+                    <div>
+
+                        <h4 id="studentName">
+
+                            Loading...
+
+                        </h4>
+
+                        <small>
+
+                            Student
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ===========================
+            DASHBOARD
+    ============================ -->
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <h2>
+
+                Student Panel
+
+            </h2>
+
+            <ul class="sidebar-menu">
+
+                <li>
+
+                    <a href="student_dashboard.html">
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="browse_courses.html">
+
+                        Browse Courses
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="assignment.html">
+
+                        Assignments
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="feedback.html">
+
+                        Feedback
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a
+                        href="#"
+                        id="logoutBtn">
+
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="dashboard-content">
+
+            <section class="welcome-card">
+
+                <div>
+
+                    <h1>
+
+                        Assignments
+
+                    </h1>
+
+                    <p>
+
+                        Complete and submit all your assignments.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ===========================
+                    Statistics
+            ============================ -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <h2 id="totalAssignments">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Total Assignments
+
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h2 id="submittedAssignments">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Submitted
+
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h2 id="pendingAssignments">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Pending
+
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    <h2 id="averageMarks">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Average Marks
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ===========================
+                    Filter
+            ============================ -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        Assignment List
+
+                    </h2>
+
+                </div>
+
+                <select id="assignmentFilter">
+
+                    <option value="all">
+
+                        All
+
+                    </option>
+
+                    <option value="pending">
+
+                        Pending
+
+                    </option>
+
+                    <option value="submitted">
+
+                        Submitted
+
+                    </option>
+
+                </select>
+
+            </section>
+
+            <!-- ===========================
+                    Assignment Container
+            ============================ -->
+
+            <section
+                class="dashboard-section"
+                id="assignmentContainer">
+
+                <!-- Generated by assignment.js -->
+
+            </section>
+
+                        <!-- =====================================
+                    ASSIGNMENT DETAILS MODAL
+            ====================================== -->
+
+            <div id="assignmentModal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h2>
+
+                            Assignment Details
+
+                        </h2>
+
+                        <button
+                            type="button"
+                            onclick="closeModal('assignmentModal')">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        class="modal-body"
+                        id="assignmentDetails">
+
+                        <!-- Generated by assignment.js -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =====================================
+                    SUBMIT ASSIGNMENT MODAL
+            ====================================== -->
+
+            <div id="submitModal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h2>
+
+                            Submit Assignment
+
+                        </h2>
+
+                        <button
+                            type="button"
+                            onclick="closeModal('submitModal')">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form id="submissionForm">
+
+                            <label>
+
+                                GitHub Link
+
+                            </label>
+
+                            <input
+                                type="url"
+                                id="githubLink"
+                                placeholder="https://github.com/username/repository">
+
+                            <label>
+
+                                Project Link
+
+                            </label>
+
+                            <input
+                                type="url"
+                                id="projectLink"
+                                placeholder="https://example.com">
+
+                            <label>
+
+                                Comments
+
+                            </label>
+
+                            <textarea
+                                id="submissionComment"
+                                rows="5"
+                                placeholder="Write your comments here..."></textarea>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                Submit Assignment
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =====================================
+                    VIEW SUBMISSION MODAL
+            ====================================== -->
+
+            <div id="viewSubmissionModal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h2>
+
+                            My Submission
+
+                        </h2>
+
+                        <button
+                            type="button"
+                            onclick="closeModal('viewSubmissionModal')">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        class="modal-body"
+                        id="submissionDetails">
+
+                        <!-- Generated by assignment.js -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- =====================================
+                    LOADER
+    ====================================== -->
+
+    <div
+        id="loader"
+        class="loader"
+        style="display:none;">
+
+        <div class="spinner"></div>
+
+    </div>
+
+    <!-- =====================================
+                    FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <p>
+
+            © 2026 E-Learning Platform |
+            Designed by Yakanna
+
+        </p>
+
+    </footer>
+
+    <!-- =====================================
+                    JAVASCRIPT FILES
+    ====================================== -->
+
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- =====================================
+                    INITIALIZATION
+    ====================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            protectPage();
+
+            displayCurrentUser();
+
+            loadAssignments();
+
+            loadAssignmentStatistics();
+
+            initializeSearch();
+
+            initializeAssignmentFilter();
+
+            initializeLogout();
+
+        });
+
+    </script>
+
+</body>
+
+</html>

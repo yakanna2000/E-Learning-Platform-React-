@@ -1,0 +1,237 @@
+/* ==========================
+LOGIN PAGE
+========================== */
+
+body{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+
+}
+
+/* Container */
+
+.login-container{
+
+    width:1000px;
+
+    max-width:95%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+/* Left */
+
+.login-left{
+
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+
+    color:white;
+
+    padding:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.login-left h1{
+
+    color:white;
+
+    font-size:40px;
+
+}
+
+.login-left p{
+
+    margin:20px 0;
+
+}
+
+.login-left img{
+
+    width:280px;
+
+}
+
+/* Right */
+
+.login-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.login-box{
+
+    width:100%;
+
+    max-width:400px;
+
+}
+
+.login-box h2{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.login-box p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+/* Inputs */
+
+.input-group{
+
+    margin-bottom:20px;
+
+}
+
+.input-group label{
+
+    font-weight:600;
+
+}
+
+/* Remember */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+
+}
+
+.options a{
+
+    color:#2563eb;
+
+}
+
+/* Button */
+
+.login-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:17px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* Links */
+
+.register-link,
+
+.home-link{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.register-link a,
+
+.home-link a{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+/* Hover Animation */
+
+.login-container{
+
+    animation:fade .7s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
