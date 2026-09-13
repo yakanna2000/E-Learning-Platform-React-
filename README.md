@@ -11,8 +11,11 @@ E-Learn allows students to explore courses, enroll in courses, complete lessons,
 Add your deployed Vercel URL here after deployment:
 
 ```text
-https://your-project-name.vercel.app
+https://e-learning-platform-six-ebon.vercel.app/
 ```
+## sample credentials 
+*for Instructor- email->instructor@gmail.com, password->instructor
+*for student- email->student@gmail.com ,password->student
 
 ## GitHub Repository
 
