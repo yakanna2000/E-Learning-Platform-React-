@@ -13,9 +13,19 @@ Add your deployed Vercel URL here after deployment:
 ```text
 https://e-learning-platform-six-ebon.vercel.app/
 ```
-## sample credentials 
-*for Instructor- email->instructor@gmail.com, password->instructor
-*for student- email->student@gmail.com ,password->student
+## Sample Credentials
+
+> These demo accounts are provided for testing the application.
+
+### Instructor Account
+
+- **Email:** instructor@gmail.com
+- **Password:** instructor
+
+### Student Account
+
+- **Email:** student@gmail.com
+- **Password:** student
 
 ## GitHub Repository
 
