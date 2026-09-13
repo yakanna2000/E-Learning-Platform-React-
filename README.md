@@ -1,4 +1,19 @@
-# E-Learn — browser-only project
+# E-Learn — React + Supabase
+
+The app is now a Vite React single-page application with responsive routing, Supabase Authentication, role-aware student/instructor views, published courses, enrollments, and persisted learning data.
+
+## Setup
+
+1. Create a Supabase project.
+2. Run [`supabase/schema.sql`](supabase/schema.sql) in its SQL Editor.
+3. Copy `.env.example` to `.env`, then enter your project URL and anon key.
+4. Run `npm install` and `npm run dev`.
+
+For a new Supabase project, either turn off email confirmation during local development or confirm the registration email before logging in.
+
+---
+
+# Legacy browser-only project
 
 E-Learn is a responsive, front-end-only learning platform built with HTML5, CSS3, and vanilla JavaScript. It uses `localStorage` as its runtime database, so it needs no Node modules, database, or backend.
 
